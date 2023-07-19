@@ -56,9 +56,9 @@ args.cuda = ( args.device.find("gpu")!=-1 and torch.cuda.is_available() )
 
 #--------------------DDP initialization-------------------------
 
-size = int(os.getenv("PMI_SIZE"))
-rank = int(os.getenv("PMI_RANK"))
-local_rank = int(os.getenv("PMI_LOCAL_RANK"))
+size = int(os.getenv("SLURM_NPROCS"))
+rank = int(os.getenv("SLURM_PROCID"))
+local_rank = int(os.getenv("SLURM_LOCALID"))
 
 fn = 'output_' + str(rank) + '.txt'
 with open(fn, 'a') as f:
@@ -75,7 +75,7 @@ with open(fn, 'a') as f:
     print(args)
     print(backend)
 
-torch.distributed.init_process_group(backend=backend, init_method='file:///home/twang3/myWork/myTest/pytorch/test_ddp/test_01/sharedfile', world_size=size, rank=rank)
+torch.distributed.init_process_group(backend=backend, init_method='file:///pscratch/sd/t/tianle/sharedfile', world_size=size, rank=rank)
 with open(fn, 'a') as f:
     print("rank = {}, is_initialized = {}, nccl_avail = {}, get_rank = {}, get_size = {}".format(rank, torch.distributed.is_initialized(), torch.distributed.is_nccl_available(), torch.distributed.get_rank(), torch.distributed.get_world_size()), file=f)
 

@@ -1,0 +1,30 @@
+Warning: This is an experimental release of NCCL with an OFI plugin for use with libfabric on Perlmutter.
+In case of issues, please refer to our known issues: https://docs.nersc.gov/current/
+and open a help ticket if your issue is not listed: https://help.nersc.gov/
+Start doing ML!
+python /global/homes/t/tianle/_temp/_for_others/wkw_07192023/main.py --batch_size=8 --device=gpu --epoch=5 --lr=0.0001 --shuffle=local --num_workers=1
+Start at the beginning of training!
+Namespace(batch_size=8, epochs=5, lr=0.0001, seed=42, log_interval=10, fp16_allreduce=False, device='gpu', shuffle='local', phase=0, num_threads=0, num_workers=1, cuda=True)
+nccl
+Start at the beginning of training!
+Namespace(batch_size=8, epochs=5, lr=0.0001, seed=42, log_interval=10, fp16_allreduce=False, device='gpu', shuffle='local', phase=0, num_threads=0, num_workers=1, cuda=True)
+nccl
+Start at the beginning of training!
+Namespace(batch_size=8, epochs=5, lr=0.0001, seed=42, log_interval=10, fp16_allreduce=False, device='gpu', shuffle='local', phase=0, num_threads=0, num_workers=1, cuda=True)
+nccl
+Start at the beginning of training!
+Namespace(batch_size=8, epochs=5, lr=0.0001, seed=42, log_interval=10, fp16_allreduce=False, device='gpu', shuffle='local', phase=0, num_threads=0, num_workers=1, cuda=True)
+nccl
+Start at the beginning of training!
+Namespace(batch_size=8, epochs=5, lr=0.0001, seed=42, log_interval=10, fp16_allreduce=False, device='gpu', shuffle='local', phase=0, num_threads=0, num_workers=1, cuda=True)
+nccl
+Start at the beginning of training!
+Namespace(batch_size=8, epochs=5, lr=0.0001, seed=42, log_interval=10, fp16_allreduce=False, device='gpu', shuffle='local', phase=0, num_threads=0, num_workers=1, cuda=True)
+nccl
+Start at the beginning of training!
+Namespace(batch_size=8, epochs=5, lr=0.0001, seed=42, log_interval=10, fp16_allreduce=False, device='gpu', shuffle='local', phase=0, num_threads=0, num_workers=1, cuda=True)
+nccl
+Start at the beginning of training!
+Namespace(batch_size=8, epochs=5, lr=0.0001, seed=42, log_interval=10, fp16_allreduce=False, device='gpu', shuffle='local', phase=0, num_threads=0, num_workers=1, cuda=True)
+nccl
+ML is finished!
